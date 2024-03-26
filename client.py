@@ -1,9 +1,11 @@
 import socket
 from time import sleep
 
+port=int(input("port: "))
+
 sock = socket.socket()
 sock.setblocking(1)
-sock.connect(('localhost', 9090))
+sock.connect(('localhost', port))
 
 msg = input("Your string:")
 #msg = "Hi!"
